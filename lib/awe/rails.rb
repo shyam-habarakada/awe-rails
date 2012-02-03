@@ -3,10 +3,10 @@ module Awe
     PROTOTYPE_JS = %w{prototype effects dragdrop controls}
 
     if ::Rails.version < "3.1"
-      require 'jquery/rails/railtie'
+      require 'awe/rails/railtie'
     else
-      require 'jquery/rails/engine'
+      require 'awe/rails/engine'
     end
-    require 'jquery/rails/version'
+    require 'awe/rails/version'
   end
 end

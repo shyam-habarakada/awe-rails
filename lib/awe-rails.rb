@@ -1,1 +1,1 @@
-require 'jquery/rails'
+require 'awe/rails'

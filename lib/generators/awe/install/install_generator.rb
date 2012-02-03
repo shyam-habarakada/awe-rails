@@ -17,15 +17,15 @@ if ::Rails.version < "3.1"
 
         def copy_jquery
           say_status("copying", "jQuery (#{Awe::Rails::JQUERY_VERSION})", :green)
-          copy_file "jquery.js", "public/javascripts/jquery.js"
-          copy_file "jquery.min.js", "public/javascripts/jquery.min.js"
+          copy_file "awe.js", "public/javascripts/awe.js"
+          copy_file "awe.min.js", "public/javascripts/awe.min.js"
         end
 
         def copy_jquery_ui
           if options.ui?
             say_status("copying", "jQuery UI (#{Awe::Rails::JQUERY_UI_VERSION})", :green)
-            copy_file "jquery-ui.js", "public/javascripts/jquery-ui.js"
-            copy_file "jquery-ui.min.js", "public/javascripts/jquery-ui.min.js"
+            copy_file "awe-ui.js", "public/javascripts/awe-ui.js"
+            copy_file "awe-ui.min.js", "public/javascripts/awe-ui.min.js"
           end
         end
 
@@ -46,8 +46,8 @@ else
 
         def do_nothing
           say_status("deprecated", "You are using Rails 3.1, so this generator is no longer needed. The necessary files are already in your asset pipeline.")
-          say_status("", "Just add `//= require jquery` and `//= require jquery_ujs` to your app/assets/javascripts/application.js")
-          say_status("", "If you upgraded your app from Rails 3.0 and still have jquery.js, rails.js, or jquery_ujs.js in your javascripts, be sure to remove them.")
+          say_status("", "Just add `//= require awe` and `//= require jquery_ujs` to your app/assets/javascripts/application.js")
+          say_status("", "If you upgraded your app from Rails 3.0 and still have awe.js, rails.js, or jquery_ujs.js in your javascripts, be sure to remove them.")
           # ok, nothing
         end
       end

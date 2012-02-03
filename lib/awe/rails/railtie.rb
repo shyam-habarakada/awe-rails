@@ -1,16 +1,16 @@
-# Configure Rails 3.0 to use public/javascripts/jquery et al
+# Configure Rails 3.0 to use public/javascripts/awe et al
 module Awe
   module Rails
 
     class Railtie < ::Rails::Railtie
       config.before_configuration do
-        require "jquery/assert_select" if ::Rails.env.test?
+        require "awe/assert_select" if ::Rails.env.test?
 
-        if ::Rails.root.join("public/javascripts/jquery-ui.min.js").exist?
-          jq_defaults = %w(jquery jquery-ui)
+        if ::Rails.root.join("public/javascripts/awe-ui.min.js").exist?
+          jq_defaults = %w(awe awe-ui)
           jq_defaults.map!{|a| a + ".min" } if ::Rails.env.production?
         else
-          jq_defaults = ::Rails.env.production? ? %w(jquery.min) : %w(jquery)
+          jq_defaults = ::Rails.env.production? ? %w(awe.min) : %w(awe)
         end
 
         # Merge the jQuery scripts, remove the Prototype defaults and finally add 'jquery_ujs'
