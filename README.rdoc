@@ -1,26 +1,28 @@
 = awe-rails
 
-* This gem adds a single generator to Rails 3.1, `awe:install`.
+* This gem adds a single generator to Rails 3.1, awe:install.
 * Running the generator will install AWE for Rails.
 * See https://github.com/sambaker/awe-core
 * AWE is installed into the rails asset pipeline.
 * These lines will be added to the file `app/assets/javascripts/application.js` by default:
 
-    `//= require awe`
+    //= require awe
 
 == Installation
 
 In your Gemfile, add this line:
 
-    `gem "awe-rails"`
+    gem "awe-rails"
 
-Then, run `bundle install`. To invoke the generator, run:
+Then, run bundle install. To invoke the generator, run:
 
-    `rails generate awe:install`
+    rails generate awe:install
     
 You're done!
 
 == Copyright
 
-Copyright (c) 2012 Artefact Group LLC. See LICENSE.txt for further details.
+Copyright (c) 2012 Artefact Group LLC. 
+
+See LICENSE.txt for further details.
 
