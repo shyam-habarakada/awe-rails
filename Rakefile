@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # encoding: utf-8
 
 require 'rubygems'
@@ -48,15 +47,3 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
-=======
-require 'bundler'
-Bundler::GemHelper.install_tasks
-
-# require "spec/rake/spectask"
-# desc "Run all examples"
-# Spec::Rake::SpecTask.new(:spec) do |t|
-#   t.ruby_opts  = ['-r test/unit']
-#   t.spec_opts = %w[--color]
-# end
-task :default => :spec
->>>>>>> ccf863516cd6c75a59a22dde092099839482274b
