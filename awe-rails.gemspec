@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "awe-rails"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shyam Habarakada"]
@@ -29,9 +29,8 @@ Gem::Specification.new do |s|
     "awe-rails-1.0.17.gem",
     "awe-rails.gemspec",
     "lib/awe-rails.rb",
-    "lib/awe/rails.rb",
-    "lib/awe/rails/engine.rb",
     "lib/generators/awe/install/install_generator.rb",
+    "lib/generators/awe/update/update_generator.rb",
     "spec/awe-rails_spec.rb",
     "spec/lib/awe-rails_spec.rb",
     "spec/spec_helper.rb",
