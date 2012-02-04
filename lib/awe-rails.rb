@@ -1,1 +1,1 @@
-require 'awe/rails'
+# ok. nothing to do
