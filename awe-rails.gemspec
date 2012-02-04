@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "awe-rails"
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shyam Habarakada"]
@@ -13,18 +13,25 @@ Gem::Specification.new do |s|
   s.description = "Modeled after the jquery-rails gem. Installs the AWE files into the rails 3.1 asset pipeline"
   s.email = "shyam.habarakada@gmail.com"
   s.extra_rdoc_files = [
+    "LICENSE",
     "LICENSE.txt",
+    "README.md",
     "README.rdoc"
   ]
   s.files = [
     ".document",
     ".rspec",
+    "CHANGELOG.md",
     "Gemfile",
     "Gemfile.lock",
+    "LICENSE",
     "LICENSE.txt",
+    "README.md",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "awe-rails-1.0.17.gem",
+    "awe-rails.gemspec",
     "lib/awe-rails.rb",
     "lib/awe/assert_select.rb",
     "lib/awe/rails.rb",
@@ -33,6 +40,7 @@ Gem::Specification.new do |s|
     "lib/awe/rails/version.rb",
     "lib/generators/awe/install/install_generator.rb",
     "spec/awe-rails_spec.rb",
+    "spec/lib/awe-rails_spec.rb",
     "spec/spec_helper.rb",
     "vendor/assets/javascripts/awe-core.js",
     "vendor/assets/javascripts/awe-state-machine.js"
