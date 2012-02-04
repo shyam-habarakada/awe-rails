@@ -1,12 +1,9 @@
 = awe-rails
 
-* This gem adds a single generator to Rails 3.1, awe:install.
-* Running the generator will install AWE for Rails.
+* This gem adds new generator to your rails app
+* These generator will install (or update) AWE for rails.
 * See https://github.com/sambaker/awe-core
-* AWE is installed into the rails asset pipeline.
-* These lines will be added to the file `app/assets/javascripts/application.js` by default:
-
-    //= require awe
+* If you have the assetpipeline enabled, AWE is installed there. Otherwise, it is copied into public/javascripts.
 
 == Installation
 
@@ -19,6 +16,12 @@ Then, run bundle install. To invoke the generator, run:
     rails generate awe:install
     
 You're done!
+
+== Getting the latest AWE files
+
+Run,
+
+    rails generate awe:update
 
 == Copyright
 
