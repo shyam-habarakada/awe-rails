@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'rspec'
@@ -12,6 +13,8 @@ RSpec.configure do |config|
   
 end
 =======
+=======
+>>>>>>> ccf863516cd6c75a59a22dde092099839482274b
 # Set up RSpec
 require 'webmock/rspec'
 
@@ -41,4 +44,7 @@ Rails.application.config.root = Rails.root
 Rails::Generators.configure!
 
 
+<<<<<<< HEAD
+>>>>>>> ccf863516cd6c75a59a22dde092099839482274b
+=======
 >>>>>>> ccf863516cd6c75a59a22dde092099839482274b
