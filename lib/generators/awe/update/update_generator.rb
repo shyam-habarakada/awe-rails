@@ -9,17 +9,17 @@ module Awe
       @@tmp_path = "tmp/vendor/assets/javascripts"
       @@github = "https://github.com/sambaker/awe-core/blob/master"
 
-      source_root File.expand_path('../../../../..', __FILE__)
+      source_root Rails.root
       
       def download_and_copy_awe
         say_status("fetching", "awe files from #{@@github}/ ...", :green)
         get "#{@@github}/awe-core.js", "#{@@tmp_path}/awe-core.js"
-        get "#{@@github}/awe-state-machine.js", "#{@@tmp_path}//awe-state-machine.js"
+        get "#{@@github}/awe-state-machine.js", "#{@@tmp_path}/awe-state-machine.js"
 
         say_status("copying", "awe files", :green)
         if ::Rails.application.config.assets.enabled         
-          copy_file "#{@@tmp_path}//awe-core.js", "vendor/assets/javascripts/awe-core.js"
-          copy_file "#{@@tmp_path}//awe-state-machine.js", "vendor/assets/javascripts/awe-state-machine.js"
+          copy_file "#{@@tmp_path}/awe-core.js", "vendor/assets/javascripts/awe-core.js"
+          copy_file "#{@@tmp_path}/awe-state-machine.js", "vendor/assets/javascripts/awe-state-machine.js"
         else
           copy_file "tmp/vendor/javascripts/awe-core.js", "public/javascripts/awe-core.js"
           copy_file "tmp/vendor/javascripts/awe-state-machine.js", "public/javascripts/awe-state-machine.js"
