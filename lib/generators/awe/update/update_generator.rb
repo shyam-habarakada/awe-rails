@@ -8,6 +8,8 @@ module Awe
 
       @@tmp_path = "tmp/vendor/assets/javascripts"
       @@github = "https://github.com/sambaker/awe-core/blob/master"
+
+      source_root File.expand_path('../../../../..', __FILE__)
       
       def download_and_copy_awe
         say_status("fetching", "awe files from #{@@github}/ ...", :green)
