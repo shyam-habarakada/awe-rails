@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://www.artefactgroup.com"
   gem.license = "MIT"
   gem.summary = %Q{Gem for integrating AWE into the rails asset pipeline}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Modeled after the jquery-rails gem. Installs the AWE files into the rails 3.1 asset pipeline}
   gem.email = "shyam.habarakada@gmail.com"
   gem.authors = ["Shyam Habarakada"]
   # dependencies defined in Gemfile
