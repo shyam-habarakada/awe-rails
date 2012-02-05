@@ -26,6 +26,5 @@ Run,
 == Copyright
 
 Copyright (c) 2012 Artefact Group LLC. 
-
-See LICENSE.txt for further details.
+Licensed under MIT
 
