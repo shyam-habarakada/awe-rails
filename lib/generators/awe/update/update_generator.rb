@@ -21,8 +21,8 @@ module Awe
           copy_file "#{@@tmp_path}/awe-core.js", "vendor/assets/javascripts/awe-core.js"
           copy_file "#{@@tmp_path}/awe-state-machine.js", "vendor/assets/javascripts/awe-state-machine.js"
         else
-          copy_file "tmp/vendor/javascripts/awe-core.js", "public/javascripts/awe-core.js"
-          copy_file "tmp/vendor/javascripts/awe-state-machine.js", "public/javascripts/awe-state-machine.js"
+          copy_file "#{@@tmp_path}/awe-core.js", "public/javascripts/awe-core.js"
+          copy_file "#{@@tmp_path}/awe-state-machine.js", "public/javascripts/awe-state-machine.js"
         end
       rescue OpenURI::HTTPError
         say_status("error", "could not fetch awe files", :red)
