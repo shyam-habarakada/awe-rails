@@ -7,7 +7,7 @@ module Awe
       desc "This generator updates AWE (Artefact Web Extensions) to the latest"
 
       @@tmp_path = "tmp/vendor/assets/javascripts"
-      @@github = "https://github.com/sambaker/awe-core/blob/master"
+      @@github = "https://raw.github.com/sambaker/awe-core/master"
 
       source_root Rails.root
       
