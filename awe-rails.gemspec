@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "awe-rails"
-  s.version = "0.2.2"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shyam Habarakada"]
-  s.date = "2012-02-04"
+  s.date = "2012-02-06"
   s.description = "Modeled after the jquery-rails gem. Installs the AWE files into the rails 3.1 asset pipeline"
   s.email = "shyam.habarakada@gmail.com"
   s.extra_rdoc_files = [
