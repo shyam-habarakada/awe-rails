@@ -1,4 +1,5 @@
 require 'rails'
+require 'open-uri'
 
 module Awe
   module Generators
@@ -6,26 +7,27 @@ module Awe
 
       desc "This generator updates AWE (Artefact Web Extensions) to the latest"
 
-      @@tmp_path = "tmp/vendor/assets/javascripts"
       @@github = "https://raw.github.com/sambaker/awe-core/master"
 
       source_root Rails.root
       
       def download_and_copy_awe
-        say_status("fetching", "awe files from #{@@github}/ ...", :green)
-        get "#{@@github}/awe-core.js", "#{@@tmp_path}/awe-core.js"
-        get "#{@@github}/awe-state-machine.js", "#{@@tmp_path}/awe-state-machine.js"
+        files = []
+        javascripts_path = ::Rails.application.config.assets.enabled ? "vendor/assets/javascripts" : "public/javascripts"
+        
+        say_status("getting", "The AWE file list from #{@@github}/ ...", :green)
+        open("#{@@github}/files") { |f|
+          f.each_line { |line| files.push(line.strip) unless line.starts_with?("#") }
+        }
 
-        say_status("copying", "awe files", :green)
-        if ::Rails.application.config.assets.enabled         
-          copy_file "#{@@tmp_path}/awe-core.js", "vendor/assets/javascripts/awe-core.js"
-          copy_file "#{@@tmp_path}/awe-state-machine.js", "vendor/assets/javascripts/awe-state-machine.js"
-        else
-          copy_file "#{@@tmp_path}/awe-core.js", "public/javascripts/awe-core.js"
-          copy_file "#{@@tmp_path}/awe-state-machine.js", "public/javascripts/awe-state-machine.js"
-        end
+        # fetch files
+        files.each { |file| 
+          say_status("fetching", "#{@@github}/#{file} into #{javascripts_path} ...", :green)
+          get "#{@@github}/#{file}", "#{javascripts_path}/#{file}"
+        }
+
       rescue OpenURI::HTTPError
-        say_status("error", "could not fetch awe files", :red)
+        say_status("error", "error fetching files", :red)
       end
 
     end
