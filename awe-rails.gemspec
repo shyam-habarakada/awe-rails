@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "awe-rails"
-  s.version = "0.4.0"
+  s.version = "0.5.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Shyam Habarakada"]
-  s.date = "2012-02-06"
+  s.date = "2012-02-12"
   s.description = "Modeled after the jquery-rails gem. Installs the AWE files into the rails 3.1 asset pipeline"
   s.email = "shyam.habarakada@gmail.com"
   s.extra_rdoc_files = [
@@ -35,7 +35,8 @@ Gem::Specification.new do |s|
     "spec/lib/awe-rails_spec.rb",
     "spec/spec_helper.rb",
     "vendor/assets/javascripts/awe-core.js",
-    "vendor/assets/javascripts/awe-state-machine.js"
+    "vendor/assets/javascripts/awe-state-machine.js",
+    "vendor/assets/javascripts/awe-ui.js"
   ]
   s.homepage = "http://www.artefactgroup.com"
   s.licenses = ["MIT"]
