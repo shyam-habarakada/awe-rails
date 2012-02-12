@@ -6,16 +6,13 @@ module Awe
 
       desc "This generator installs AWE (Artefact Web Extensions) into rails"
       source_root File.expand_path('../../../../../vendor/assets/javascripts', __FILE__)
+      javascripts_path = ::Rails.application.config.assets.enabled ? "vendor/assets/javascripts" : "public/javascripts"
 
       def copy_awe
-        say_status("copying", "awe files", :green)
-        if ::Rails.application.config.assets.enabled         
-          copy_file "awe-core.js", "vendor/assets/javascripts/awe-core.js"
-          copy_file "awe-state-machine.js", "vendor/assets/javascripts/awe-state-machine.js"
-        else
-          copy_file "awe-core.js", "public/javascripts/awe-core.js"
-          copy_file "awe-state-machine.js", "public/javascripts/awe-state-machine.js"
-        end
+        say_status("copying", "The AWE files", :green)
+        copy_file "awe-core.js", "#{javascripts_path}/awe-core.js"
+        copy_file "awe-state-machine.js", "#{javascripts_path}/awe-state-machine.js"
+        copy_file "awe-ui.js", "#{javascripts_path}/awe-ui.js"
       end
 
     end
